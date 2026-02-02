@@ -1,8 +1,17 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "מדיניות פרטיות | פולימרקט ישראל",
-  description: "מדיניות הפרטיות של אתר פולימרקט ישראל - מידע על איסוף ושימוש במידע אישי.",
+  title: "מדיניות פרטיות",
+  description: "מדיניות הפרטיות של אתר פולימרקט ישראל - מידע על איסוף ושימוש במידע אישי, עוגיות וזכויות המשתמש.",
+  alternates: {
+    canonical: "/privacy",
+  },
+  openGraph: {
+    title: "מדיניות פרטיות | פולימרקט ישראל",
+    description: "מדיניות הפרטיות של אתר פולימרקט ישראל - מידע על איסוף ושימוש במידע אישי.",
+    url: "/privacy",
+    images: ["/og-image.svg"],
+  },
 };
 
 export default function PrivacyPage() {

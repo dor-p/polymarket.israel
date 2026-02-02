@@ -2,8 +2,17 @@ import { Metadata } from "next";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "אודות פולימרקט | פולימרקט ישראל",
-  description: "למדו על פולימרקט - הפלטפורמה המובילה בעולם לשוקי ניבויים מבוססי בלוקצ׳יין.",
+  title: "אודות פולימרקט",
+  description: "למדו על פולימרקט - הפלטפורמה המובילה בעולם לשוקי ניבויים מבוססי בלוקצ׳יין. מידע על הטכנולוגיה, איך זה עובד ולמה שוקי ניבויים מדויקים יותר.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "אודות פולימרקט | פולימרקט ישראל",
+    description: "למדו על פולימרקט - הפלטפורמה המובילה בעולם לשוקי ניבויים מבוססי בלוקצ׳יין.",
+    url: "/about",
+    images: ["/og-image.svg"],
+  },
 };
 
 export default function AboutPage() {

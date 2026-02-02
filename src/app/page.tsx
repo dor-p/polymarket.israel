@@ -1,12 +1,81 @@
+import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 
+export const metadata: Metadata = {
+  title: "פולימרקט ישראל - שוק הניבויים המוביל בעולם",
+  description: "למד על פולימרקט - פלטפורמת שוק הניבויים הגדולה בעולם. סחר על תוצאות אירועים אמיתיים בצורה פשוטה ושקופה.",
+  alternates: {
+    canonical: "/",
+  },
+};
+
+// FAQPage structured data for the FAQ section
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "מה זה שוק ניבויים?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "שוק ניבויים הוא פלטפורמה שבה אנשים יכולים לסחור על תוצאות של אירועים עתידיים. המחירים משקפים את ההסתברות הקולקטיבית שהקהילה מעריכה לכל תוצאה אפשרית.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "איך אפשר להרוויח בפולימרקט?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "אתם קונים מניות על תוצאה מסוימת. אם התוצאה מתרחשת, כל מניה שווה $1. אם לא - היא שווה $0. ההבדל בין מחיר הקנייה למחיר הסופי הוא הרווח או ההפסד שלכם.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "האם פולימרקט בטוח?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "פולימרקט בנוי על טכנולוגיית בלוקצ׳יין (Polygon) המבטיחה שקיפות מלאה. כל העסקאות מתועדות באופן ציבורי ולא ניתן לשנות אותן.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "איזה סוגי שווקים קיימים?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "בפולימרקט תמצאו שווקים על מגוון נושאים: בחירות ופוליטיקה, ספורט, כלכלה ופיננסים, טכנולוגיה, בידור ועוד.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "מה המינימום להתחיל לסחור?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "אין מינימום קבוע. אתם יכולים להתחיל עם כל סכום שתרצו ולקנות חלקי מניות.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "איך מפקידים ומושכים כסף?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "פולימרקט תומך במגוון שיטות תשלום כולל כרטיסי אשראי, העברות בנקאיות ומטבעות קריפטוגרפיים.",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero />
 
       {/* What is Polymarket Section */}

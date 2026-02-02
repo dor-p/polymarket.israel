@@ -1,8 +1,17 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "תנאי שימוש | פולימרקט ישראל",
-  description: "תנאי השימוש באתר פולימרקט ישראל - כללים, הגבלות אחריות והצהרות משפטיות.",
+  title: "תנאי שימוש",
+  description: "תנאי השימוש באתר פולימרקט ישראל - כללים, הגבלות אחריות, קישורי שותפים והצהרות משפטיות.",
+  alternates: {
+    canonical: "/terms",
+  },
+  openGraph: {
+    title: "תנאי שימוש | פולימרקט ישראל",
+    description: "תנאי השימוש באתר פולימרקט ישראל - כללים, הגבלות אחריות והצהרות משפטיות.",
+    url: "/terms",
+    images: ["/og-image.svg"],
+  },
 };
 
 export default function TermsPage() {
