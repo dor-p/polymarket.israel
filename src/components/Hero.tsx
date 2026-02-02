@@ -1,9 +1,22 @@
+import Image from "next/image";
+
 const AFFILIATE_LINK = "https://polymarket.com?via=israel";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-b from-[var(--surface)] to-[var(--background)] py-20 md:py-32">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative bg-gradient-to-b from-[var(--surface)] to-[var(--background)] py-20 md:py-32 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-bg.png"
+          alt=""
+          fill
+          className="object-cover opacity-10"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--surface)]/80 to-[var(--background)]" />
+      </div>
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--secondary)] mb-6 leading-tight">
           פולימרקט
           <span className="block text-[var(--primary)]">שוק הניבויים המוביל בעולם</span>

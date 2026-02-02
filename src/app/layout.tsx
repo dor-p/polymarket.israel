@@ -24,6 +24,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: baseUrl,
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: "פולימרקט ישראל - שוק הניבויים המוביל בעולם",
     description: "למד על פולימרקט - פלטפורמת שוק הניבויים הגדולה בעולם",
@@ -33,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "פולימרקט ישראל - שוק הניבויים המוביל בעולם",
@@ -44,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "פולימרקט ישראל - שוק הניבויים המוביל בעולם",
     description: "למד על פולימרקט - פלטפורמת שוק הניבויים הגדולה בעולם",
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -59,7 +69,7 @@ const organizationSchema = {
   name: "פולימרקט ישראל",
   alternateName: "Polymarket Israel",
   url: baseUrl,
-  logo: `${baseUrl}/og-image.svg`,
+  logo: `${baseUrl}/icon.png`,
   description: "מדריך ישראלי לפולימרקט - פלטפורמת שוק הניבויים המובילה בעולם",
   sameAs: [],
 };
